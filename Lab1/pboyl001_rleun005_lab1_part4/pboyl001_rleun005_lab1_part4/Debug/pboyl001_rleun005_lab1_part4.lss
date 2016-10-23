@@ -1,0 +1,236 @@
+
+pboyl001_rleun005_lab1_part4.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00000144  000001b8  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000144  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .stab         000006cc  00000000  00000000  000001b8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  3 .stabstr      00000085  00000000  00000000  00000884  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_aranges 00000080  00000000  00000000  00000910  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000368  00000000  00000000  00000990  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000000b1  00000000  00000000  00000cf8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000002af  00000000  00000000  00000da9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000024  00000000  00000000  00001058  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000113  00000000  00000000  0000107c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000090  00000000  00000000  0000118f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000018  00000000  00000000  0000121f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 46 00 	jmp	0x8c	; 0x8c <__ctors_end>
+   4:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+   8:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+   c:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  10:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  14:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  18:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  1c:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  20:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  24:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  28:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  2c:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  30:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  34:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  38:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  3c:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  40:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  44:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  48:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  4c:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  50:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  54:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  58:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  5c:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  60:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  64:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  68:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  6c:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  70:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  74:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  78:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  7c:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  80:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  84:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+  88:	0c 94 66 00 	jmp	0xcc	; 0xcc <__bad_interrupt>
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e4       	ldi	r29, 0x40	; 64
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+  98:	11 e0       	ldi	r17, 0x01	; 1
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	e4 e4       	ldi	r30, 0x44	; 68
+  a0:	f1 e0       	ldi	r31, 0x01	; 1
+  a2:	00 e0       	ldi	r16, 0x00	; 0
+  a4:	0b bf       	out	0x3b, r16	; 59
+  a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+  a8:	07 90       	elpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	a0 30       	cpi	r26, 0x00	; 0
+  ae:	b1 07       	cpc	r27, r17
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+  b2:	1b be       	out	0x3b, r1	; 59
+
+000000b4 <__do_clear_bss>:
+  b4:	11 e0       	ldi	r17, 0x01	; 1
+  b6:	a0 e0       	ldi	r26, 0x00	; 0
+  b8:	b1 e0       	ldi	r27, 0x01	; 1
+  ba:	01 c0       	rjmp	.+2      	; 0xbe <.do_clear_bss_start>
+
+000000bc <.do_clear_bss_loop>:
+  bc:	1d 92       	st	X+, r1
+
+000000be <.do_clear_bss_start>:
+  be:	a0 30       	cpi	r26, 0x00	; 0
+  c0:	b1 07       	cpc	r27, r17
+  c2:	e1 f7       	brne	.-8      	; 0xbc <.do_clear_bss_loop>
+  c4:	0e 94 68 00 	call	0xd0	; 0xd0 <main>
+  c8:	0c 94 a0 00 	jmp	0x140	; 0x140 <_exit>
+
+000000cc <__bad_interrupt>:
+  cc:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000d0 <main>:
+
+#include <avr/io.h>
+
+int main(void)
+{
+	DDRA = 0x00; PORTA = 0xFF; // Configure port A's 8 pins as inputs
+  d0:	11 b8       	out	0x01, r1	; 1
+  d2:	8f ef       	ldi	r24, 0xFF	; 255
+  d4:	82 b9       	out	0x02, r24	; 2
+	DDRB = 0x00; PORTB = 0xFF; // Configure port B's 8 pins as outputs,
+  d6:	14 b8       	out	0x04, r1	; 4
+  d8:	85 b9       	out	0x05, r24	; 5
+	DDRC = 0x00; PORTC = 0xFF;
+  da:	17 b8       	out	0x07, r1	; 7
+  dc:	88 b9       	out	0x08, r24	; 8
+	DDRD = 0xFF; PORTD = 0x00;
+  de:	8a b9       	out	0x0a, r24	; 10
+  e0:	1b b8       	out	0x0b, r1	; 11
+    {
+		PORTD = 0x00;
+        totalWeight = PINA + PINB + PINC;
+		if(totalWeight > 0x8C)
+		{
+			PORTD = 0x01;
+  e2:	61 e0       	ldi	r22, 0x01	; 1
+			if(difference > 0x50)
+			{
+				
+				PORTD = 0x02;
+			}
+			unsigned short weightLeft = 0x8C - totalWeight;
+  e4:	2c e8       	ldi	r18, 0x8C	; 140
+  e6:	30 e0       	ldi	r19, 0x00	; 0
+						
+			}
+			if(difference > 0x50)
+			{
+				
+				PORTD = 0x02;
+  e8:	72 e0       	ldi	r23, 0x02	; 2
+	
+	unsigned short totalWeight = 0;
+	unsigned short difference = 0;
+    while(1)
+    {
+		PORTD = 0x00;
+  ea:	1b b8       	out	0x0b, r1	; 11
+        totalWeight = PINA + PINB + PINC;
+  ec:	50 b1       	in	r21, 0x00	; 0
+  ee:	83 b1       	in	r24, 0x03	; 3
+  f0:	46 b1       	in	r20, 0x06	; 6
+  f2:	90 e0       	ldi	r25, 0x00	; 0
+  f4:	85 0f       	add	r24, r21
+  f6:	91 1d       	adc	r25, r1
+  f8:	84 0f       	add	r24, r20
+  fa:	91 1d       	adc	r25, r1
+		if(totalWeight > 0x8C)
+  fc:	8d 38       	cpi	r24, 0x8D	; 141
+  fe:	91 05       	cpc	r25, r1
+ 100:	10 f0       	brcs	.+4      	; 0x106 <main+0x36>
+		{
+			PORTD = 0x01;
+ 102:	6b b9       	out	0x0b, r22	; 11
+ 104:	f2 cf       	rjmp	.-28     	; 0xea <main+0x1a>
+			
+		}
+		else
+		{
+			if(PINA > PINC)
+ 106:	50 b1       	in	r21, 0x00	; 0
+ 108:	46 b1       	in	r20, 0x06	; 6
+ 10a:	45 17       	cp	r20, r21
+ 10c:	30 f4       	brcc	.+12     	; 0x11a <main+0x4a>
+			{
+				difference = PINA - PINC;
+ 10e:	40 b1       	in	r20, 0x00	; 0
+ 110:	e6 b1       	in	r30, 0x06	; 6
+ 112:	50 e0       	ldi	r21, 0x00	; 0
+ 114:	4e 1b       	sub	r20, r30
+ 116:	51 09       	sbc	r21, r1
+ 118:	05 c0       	rjmp	.+10     	; 0x124 <main+0x54>
+			}
+			else
+			{
+				
+				difference = PINC - PINA;
+ 11a:	46 b1       	in	r20, 0x06	; 6
+ 11c:	e0 b1       	in	r30, 0x00	; 0
+ 11e:	50 e0       	ldi	r21, 0x00	; 0
+ 120:	4e 1b       	sub	r20, r30
+ 122:	51 09       	sbc	r21, r1
+						
+			}
+			if(difference > 0x50)
+ 124:	41 35       	cpi	r20, 0x51	; 81
+ 126:	51 05       	cpc	r21, r1
+ 128:	08 f0       	brcs	.+2      	; 0x12c <main+0x5c>
+			{
+				
+				PORTD = 0x02;
+ 12a:	7b b9       	out	0x0b, r23	; 11
+			}
+			unsigned short weightLeft = 0x8C - totalWeight;
+ 12c:	a9 01       	movw	r20, r18
+ 12e:	48 1b       	sub	r20, r24
+ 130:	59 0b       	sbc	r21, r25
+ 132:	ca 01       	movw	r24, r20
+			unsigned char tempD = PIND;
+ 134:	49 b1       	in	r20, 0x09	; 9
+			//weightLeft = weightLeft << 1;
+			weightLeft = weightLeft & 0xFC;
+ 136:	8c 7f       	andi	r24, 0xFC	; 252
+ 138:	90 70       	andi	r25, 0x00	; 0
+			PORTD = weightLeft | tempD;
+ 13a:	84 2b       	or	r24, r20
+ 13c:	8b b9       	out	0x0b, r24	; 11
+ 13e:	d5 cf       	rjmp	.-86     	; 0xea <main+0x1a>
+
+00000140 <_exit>:
+ 140:	f8 94       	cli
+
+00000142 <__stop_program>:
+ 142:	ff cf       	rjmp	.-2      	; 0x142 <__stop_program>
